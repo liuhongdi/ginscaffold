@@ -21,7 +21,7 @@ func (a *ArticleController) GetOne(c *gin.Context) {
 	param := request.ArticleRequest{ID: validCheck.StrTo(c.Param("id")).MustUInt64()}
 	valid, errs := validCheck.BindAndValid(c, &param)
 	if !valid {
-		result.Error(400,errs.Error())
+		result.ErrorCode(400,errs.Error())
 		return
 	}
 
@@ -33,7 +33,7 @@ func (a *ArticleController) GetOne(c *gin.Context) {
 
 	articleOne,err := service.GetOneArticle(param.ID);
 	if err != nil {
-		result.Error(404,"数据查询错误")
+		result.ErrorCode(404,"数据查询错误")
 	} else {
 		result.Success(&articleOne);
 	}
@@ -53,7 +53,7 @@ func (a *ArticleController) GetList(c *gin.Context) {
 		param := request.ArticleListRequest{Page: validCheck.StrTo(c.Param("page")).MustInt()}
 		valid, errs := validCheck.BindAndValid(c, &param)
 		if !valid {
-			result.Error(400,errs.Error())
+			result.ErrorCode(400,errs.Error())
 			return
 		}
 		pageInt = param.Page
@@ -64,7 +64,7 @@ func (a *ArticleController) GetList(c *gin.Context) {
 
 	articles,err := service.GetArticleList(pageOffset,pageSize)
 	if err != nil {
-		result.Error(404,"数据查询错误");
+		result.ErrorCode(404,"数据查询错误");
 		fmt.Println(err.Error())
 	} else {
 		//sum,_ := dao.SelectcountAll()

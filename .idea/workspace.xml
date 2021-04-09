@@ -1,22 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d897cee-528c-4917-8f7e-93aa7210c463" name="Default Changelist" comment="" />
+    <list default="true" id="0d897cee-528c-4917-8f7e-93aa7210c463" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/articleController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/articleController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/global/setting.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/result/result.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/result/result.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/router/router.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="GOROOT" path="/usr/local/soft/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="ProjectId" id="1qsU2gGrAFIcscbEeKvo1ek6Hjl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
@@ -51,21 +72,21 @@
       <screen x="0" y="0" width="1440" height="837" />
     </state>
     <state x="515" y="255" width="402" height="336" key="#Go_Modules/0.0.1440.837@0.0.1440.837" timestamp="1617868037023" />
-    <state width="1386" height="63" key="GridCell.Tab.0.bottom" timestamp="1617870852110">
+    <state width="1386" height="217" key="GridCell.Tab.0.bottom" timestamp="1617963580988">
       <screen x="0" y="0" width="1440" height="837" />
     </state>
-    <state width="1386" height="63" key="GridCell.Tab.0.bottom/0.0.1440.837@0.0.1440.837" timestamp="1617870852110" />
-    <state width="1386" height="63" key="GridCell.Tab.0.center" timestamp="1617870852109">
+    <state width="1386" height="217" key="GridCell.Tab.0.bottom/0.0.1440.837@0.0.1440.837" timestamp="1617963580988" />
+    <state width="1386" height="217" key="GridCell.Tab.0.center" timestamp="1617963580987">
       <screen x="0" y="0" width="1440" height="837" />
     </state>
-    <state width="1386" height="63" key="GridCell.Tab.0.center/0.0.1440.837@0.0.1440.837" timestamp="1617870852109" />
-    <state width="1386" height="63" key="GridCell.Tab.0.left" timestamp="1617870852109">
+    <state width="1386" height="217" key="GridCell.Tab.0.center/0.0.1440.837@0.0.1440.837" timestamp="1617963580987" />
+    <state width="1386" height="217" key="GridCell.Tab.0.left" timestamp="1617963580986">
       <screen x="0" y="0" width="1440" height="837" />
     </state>
-    <state width="1386" height="63" key="GridCell.Tab.0.left/0.0.1440.837@0.0.1440.837" timestamp="1617870852109" />
-    <state width="1386" height="63" key="GridCell.Tab.0.right" timestamp="1617870852110">
+    <state width="1386" height="217" key="GridCell.Tab.0.left/0.0.1440.837@0.0.1440.837" timestamp="1617963580986" />
+    <state width="1386" height="217" key="GridCell.Tab.0.right" timestamp="1617963580987">
       <screen x="0" y="0" width="1440" height="837" />
     </state>
-    <state width="1386" height="63" key="GridCell.Tab.0.right/0.0.1440.837@0.0.1440.837" timestamp="1617870852110" />
+    <state width="1386" height="217" key="GridCell.Tab.0.right/0.0.1440.837@0.0.1440.837" timestamp="1617963580987" />
   </component>
 </project>

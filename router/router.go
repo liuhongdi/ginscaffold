@@ -6,6 +6,7 @@ import (
 	"ginscaffold/global"
 	"ginscaffold/middleware"
 	"ginscaffold/pkg/result"
+	"net/http"
 	"runtime/debug"
 )
 
@@ -17,10 +18,17 @@ func Router() *gin.Engine {
 	router.Use(middleware.AccessLog())
 	router.Use(Recover)
 
-	// 路径映射
+	//static
+	router.StaticFS("/static", http.Dir(global.StaticSetting.StaticDir))
+	//article
 	articlec:=controller.NewArticleController()
 	router.GET("/article/getone/:id", articlec.GetOne);
 	router.GET("/article/list", articlec.GetList);
+	//user
+	userc:=controller.NewUserController()
+	router.POST("/user/login", userc.Login);
+	router.GET("/user/info",middleware.JWTAuthMiddleware(), userc.Info);
+	router.GET("/user/pass", userc.Pass);
 	return router
 }
 
@@ -28,7 +36,7 @@ func Router() *gin.Engine {
 func HandleNotFound(c *gin.Context) {
 	global.Logger.Errorf("handle not found: %v", c.Request.RequestURI)
 	//global.Logger.Errorf("stack: %v",string(debug.Stack()))
-	result.NewResult(c).Error(404,"资源未找到")
+	result.NewResult(c).ErrorCode(404,"资源未找到")
 	return
 }
 
@@ -44,7 +52,7 @@ func Recover(c *gin.Context) {
 			//print stack
 			debug.PrintStack()
 			//return
-			result.NewResult(c).Error(500,"服务器内部错误")
+			result.NewResult(c).ErrorCode(500,"服务器内部错误")
 		}
 	}()
 	//继续后续接口调用

@@ -22,3 +22,5 @@ AccessLog:
   LogFilePath: /data/gologs/logs
   LogFileName: access
   LogFileExt: log
+Static:
+  StaticDir: /data/liuhongdi/ginscaffold/static

@@ -38,12 +38,17 @@ type AccessLogSettingS struct {
 	LogFileName string  //Access日志文件的名字
 	LogFileExt      string    //文件的扩展名
 }
+//静态目录配置
+type StaticSettingS struct {
+	StaticDir     string    //静态文件目录
+}
 //定义全局变量
 var (
 	ServerSetting   *ServerSettingS
 	DatabaseSetting *DatabaseSettingS
 	LogSetting *LogSettingS
 	AccessLogSetting *AccessLogSettingS
+	StaticSetting *StaticSettingS
 )
 
 //读取配置到全局变量
@@ -58,6 +63,11 @@ func SetupSetting() error {
 	}
 
 	err = s.ReadSection("Server", &ServerSetting)
+	if err != nil {
+		return err
+	}
+
+	err = s.ReadSection("Static", &StaticSetting)
 	if err != nil {
 		return err
 	}

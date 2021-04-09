@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<input id="username" placeholder="请输入用户名" /><br/>
+<input id="password" placeholder="请输入密码" /><br/>
+<input type="button" name="save" value="登录" onclick="submit()" />
+
+<script>
+    //提交验证码和id
+    function submit() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var postdata = {
+            "username":username,
+            "password":password
+        };
+        $.ajax({
+            type: "POST",
+            url: "/user/login",
+            data: postdata,
+            dataType: "JSON",
+            success: function(result) {
+                if (result.code == 0){
+                    alert("验证成功,token:"+result.data.tokenString);
+                    localStorage.setItem("token",result.data.tokenString);
+                } else {
+                    alert("验证错误:"+result.msg);
+                }
+            }
+        });
+    }
+
+</script>
+
+</body>
+</html>
